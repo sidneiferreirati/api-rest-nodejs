@@ -8,5 +8,9 @@
   "keywords": [],
   "author": "Sidnei Ferreira",
   "license": "ISC",
-  "description": "Criando API REST com NodeJS"
+  "description": "Criando API REST com NodeJS",
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4"
+  }
 }
