@@ -7,14 +7,14 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/home", (req, res) => {
-  res.status(200).json({ message: "Hello World!" });
+app.get("/", myMiddleware, (req, res) => {
+  res.status(200).json({ message: "Hello World!", user_id: req.user_id });
 });
 
 //Middleware local em uma rota específica
 app.post("/products", myMiddleware, (req, res) => {
   const { name, price } = req.body;
-  res.status(201).json(`Produto ${name} criado com sucesso! Preço: ${price}`);
+  res.status(201).json(`Produto ${name} criado com sucesso! Preço: ${price} `);
 });
 
 app.listen(PORT, () => {
