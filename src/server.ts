@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post("/products", (req, res) => {
   const { name, price } = req.body;
-  res.send(`Produto ${name} criado com sucesso! Preço: ${price}`);
+  res.status(201).json(`Produto ${name} criado com sucesso! Preço: ${price}`);
 });
 
 app.listen(PORT, () => {
