@@ -4,9 +4,9 @@ const PORT = 3333;
 
 const app = express();
 
-app.post("/products/:id", (req, res) => {
-  const { id } = req.params;
-  res.send(`produto ${id} criado com sucesso!`);
+app.post("/products", (req, res) => {
+  const { page, limit } = req.query;
+  res.send(`Pagina ${page} com ${limit} produtos`);
 });
 
 app.listen(PORT, () => {
