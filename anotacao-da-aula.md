@@ -14,3 +14,4 @@ npx tsc src/server.ts
 
 5 => instalação do express -> npm i express@4.19.2
 5.a => precisa instalar a types@express => npm i --save-dev @types/express
++
