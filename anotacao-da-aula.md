@@ -5,3 +5,6 @@ npx tsc src/server.ts
 
 2.a => convertendo o arquivo vai aparecer o arquivo em js
 2.a => convertido o arquivo podemos executar com o comando node src/server.js
+
+3 -> instalação do tsx -> npm i tsx@4.16.2 -D
+3.a serve para executar o arquivo ts sem precisar a conversao  

@@ -3,4 +3,4 @@ function sum(a: number, b: number): number {
 }
 
 const result: Number = sum(1, 2);
-console.log(result);
+console.log("Legal");
