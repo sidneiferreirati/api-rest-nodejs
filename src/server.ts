@@ -6,13 +6,13 @@ const PORT = 3333;
 const app = express();
 
 app.use(express.json());
-app.use(myMiddleware);
 
 app.get("/home", (req, res) => {
   res.status(200).json({ message: "Hello World!" });
 });
 
-app.post("/products", (req, res) => {
+//Middleware local em uma rota específica
+app.post("/products", myMiddleware, (req, res) => {
   const { name, price } = req.body;
   res.status(201).json(`Produto ${name} criado com sucesso! Preço: ${price}`);
 });
